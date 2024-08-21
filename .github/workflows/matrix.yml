@@ -34,6 +34,7 @@ jobs:
         env:
           val: value
         run: |
+          echo "${{ github.workflow }}-${{ github.ref }}"
           echo "action_state=yellow" >> "$GITHUB_ENV"
           echo "val is $val or use env ${{ env.val }}"
       - name: step 2
