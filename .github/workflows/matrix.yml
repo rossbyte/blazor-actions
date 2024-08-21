@@ -31,6 +31,6 @@ jobs:
           val: 'value'
         run: |
           echo "action_state=yellow" >> "$GITHUB_ENV"
-          echo "$action_state"
+          echo "${{ action_state }}"
         #run: echo '$env.val'
         #run: echo '${{ matrix.os }} | ${{ matrix.system }}'
