@@ -29,9 +29,10 @@ jobs:
       - name: Run a one-line script
         id : step1
         env:
-          val: 'value'
+          val: value
         run: |
           echo "action_state=yellow" >> "$GITHUB_ENV"
+          echo "val is $val"
       - name: step 2
         run: echo "$action_state"
         #run: echo '$env.val'
