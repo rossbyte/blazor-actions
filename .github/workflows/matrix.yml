@@ -29,5 +29,5 @@ jobs:
       - name: Run a one-line script
         env:
           val: 'value'
-        run: echo '$val'
+        run: echo '$env.val'
         #run: echo '${{ matrix.os }} | ${{ matrix.system }}'
