@@ -27,10 +27,12 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        id : step1
         env:
           val: 'value'
         run: |
           echo "action_state=yellow" >> "$GITHUB_ENV"
-          echo "${{ action_state }}"
+      - name: step 2
+        run: echo "$action_state"
         #run: echo '$env.val'
         #run: echo '${{ matrix.os }} | ${{ matrix.system }}'
