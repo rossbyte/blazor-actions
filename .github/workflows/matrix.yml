@@ -32,7 +32,7 @@ jobs:
           val: value
         run: |
           echo "action_state=yellow" >> "$GITHUB_ENV"
-          echo "val is $val"
+          echo "val is $val or use env ${{ env.val }}"
       - name: step 2
         run: echo "$action_state"
         #run: echo '$env.val'
