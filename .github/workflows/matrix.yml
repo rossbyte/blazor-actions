@@ -27,4 +27,7 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo '${{ matrix.os }} | ${{ matrix.system }}'
+        env:
+          val: 'value'
+        run: echo '$val'
+        #run: echo '${{ matrix.os }} | ${{ matrix.system }}'
